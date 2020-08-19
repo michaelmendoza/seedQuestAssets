@@ -15,7 +15,7 @@ MonoBehaviour:
   interactableName: 
   labelPosOffset: {x: 0, y: 0, z: 0}
   interactableUI:
-    name: Drink stant
+    name: Drink stand
     positionOffset: {x: 1.93, y: 5.49, z: -0.61}
   interactableCamera:
     lookAtOffset: {x: 0, y: 0, z: 0}
