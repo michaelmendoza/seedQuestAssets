@@ -70,7 +70,7 @@ MonoBehaviour:
       source: {fileID: 0}
     particleEffectName: 
     particleEffect: {fileID: 0}
-  - actionName: Rug2
+  - actionName: Rug 2
     prefab: {fileID: 2892417193287020050, guid: 197978cd065ce2647a59c6ec3372e143,
       type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
       source: {fileID: 0}
     particleEffectName: 
     particleEffect: {fileID: 0}
-  - actionName: Rug3
+  - actionName: Rug 3
     prefab: {fileID: 4379645562902842216, guid: 7a44fb169234bb4469a7ea2bca19651d,
       type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
       source: {fileID: 0}
     particleEffectName: 
     particleEffect: {fileID: 0}
-  - actionName: Rug4
+  - actionName: Rug 4
     prefab: {fileID: 2158560782779803800, guid: 352480e3a1ec5514daed516a7b0ac9c5,
       type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
