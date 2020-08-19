@@ -12,9 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1c21d9ece6c4e229a7c25408d3063a, type: 3}
   m_Name: HH_Painting
   m_EditorClassIdentifier: 
-  interactableName: Hang Painting
-  prompt: 
-  labelPosOffset: {x: 0, y: 0, z: 0}
+  interactableUI:
+    name: Hang Painting
+    positionOffset: {x: 0, y: 0, z: 0}
+  interactableCamera:
+    lookAtOffset: {x: 0, y: 0, z: 0}
+    positionOffset: {x: 0, y: 0, z: 0}
+    zoomDistance: 10
+  interactablePreview:
+    scale: {x: 1, y: 1, z: 1}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+    useOrthographic: 1
+    fieldOfView: 60
+    orthographicSize: 1
+    previewPrefab: {fileID: 0}
+    useRotate: 1
+    rotateSpeed: 25
+  ID:
+    siteID: 0
+    spotID: 0
+    actionID: 0
+  defaultState:
+    actionName: Hang Painting
+    prefab: {fileID: 7393080076928028663, guid: 9eb9c56118cd1c74bba28766b6525625,
+      type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    mesh: {fileID: 0}
+    material: {fileID: 0}
+    materialIndex: 0
+    uvOffset: {x: 0, y: 0}
+    animatorController: {fileID: 0}
+    soundEffectName: 
+    soundEffect:
+      name: 
+      clip: {fileID: 0}
+      volume: 1
+      loop: 0
+      source: {fileID: 0}
+    particleEffectName: 
+    particleEffect: {fileID: 0}
   states:
   - actionName: Head Of Skeleton
     prefab: {fileID: 2395266292357930968, guid: 21b2bd1aaa4f7ac43910761bf6e05a4c,
