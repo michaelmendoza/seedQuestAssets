@@ -18,7 +18,7 @@ MonoBehaviour:
     name: Bush
     positionOffset: {x: 0, y: 2, z: -1}
   interactableCamera:
-    lookAtOffset: {x: 0, y: 1.3, z: 0}
+    lookAtOffset: {x: -1, y: -1.5, z: 0}
     positionOffset: {x: 0, y: 0, z: 0}
     zoomDistance: 15
   interactablePreview:
