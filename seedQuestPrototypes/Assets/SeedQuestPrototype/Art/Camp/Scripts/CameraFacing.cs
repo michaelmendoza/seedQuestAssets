@@ -8,6 +8,8 @@ public class CameraFacing : MonoBehaviour
 
     void Update()
     {
+        if (!cameraToLookAt)
+            return;
         Vector3 v = cameraToLookAt.transform.position - transform.position;
         v.x = v.z = 0.0f;
         transform.LookAt(cameraToLookAt.transform.position - v);
