@@ -150,13 +150,13 @@ public class InteractableAutoCounter : MonoBehaviour
             rowData[5] = item.Name;
             rowData[6] = item.name;
             rowData[7] = (item.stateData.defaultState.prefab != null) ? item.stateData.defaultState.prefab.name : "null";
-            rowData[8] = (item.stateData.states[0] != null) ? item.stateData.states[0].actionName.Replace("\"", "\"\"") : "null";
+            rowData[8] = (item.stateData.states[0] != null) ? "\"" + item.stateData.states[0].actionName.Replace("\"", "\"\"") + "\"" : "null";
             rowData[9] = (item.stateData.states[0].prefab != null) ? item.stateData.states[0].prefab.name : "null";
-            rowData[10] = (item.stateData.states[1] != null) ? item.stateData.states[1].actionName.Replace("\"", "\"\"") : "null";
+            rowData[10] = (item.stateData.states[1] != null) ? "\"" + item.stateData.states[1].actionName.Replace("\"", "\"\"") + "\"" : "null";
             rowData[11] = (item.stateData.states[1].prefab != null) ? item.stateData.states[1].prefab.name : "null";
-            rowData[12] = (item.stateData.states[2] != null) ? item.stateData.states[2].actionName.Replace("\"", "\"\"") : "null";
+            rowData[12] = (item.stateData.states[2] != null) ? "\"" + item.stateData.states[2].actionName.Replace("\"", "\"\"") + "\"" : "null";
             rowData[13] = (item.stateData.states[2].prefab != null) ? item.stateData.states[2].prefab.name : "null";
-            rowData[14] = (item.stateData.states[3] != null) ? item.stateData.states[3].actionName.Replace("\"", "\"\"") : "null";
+            rowData[14] = (item.stateData.states[3] != null) ? "\"" + item.stateData.states[3].actionName.Replace("\"", "\"\"") + "\"" : "null";
             rowData[15] = (item.stateData.states[3].prefab != null) ? item.stateData.states[3].prefab.name : "null";
 
             interactableRowData.Add(rowData);
