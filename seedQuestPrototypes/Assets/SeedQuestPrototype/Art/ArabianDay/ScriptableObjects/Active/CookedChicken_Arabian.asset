@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CookedChicken_Arabian
   m_EditorClassIdentifier: 
   interactableUI:
-    name: Chicken
+    name: Chicken Dinner
     positionOffset: {x: 0, y: 0.8, z: 0}
   interactableCamera:
     lookAtOffset: {x: 0, y: 0.2, z: 0}
