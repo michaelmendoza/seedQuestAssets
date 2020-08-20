@@ -7176,6 +7176,12 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4345504551747455796, guid: d174d98ee3db2ca41bfb2e7ad1d86f61,
+        type: 3}
+      propertyPath: worldSceneList
+      value: 
+      objectReference: {fileID: 11400000, guid: cc3549637ced44e82b5be35e56a7683c,
+        type: 2}
     - target: {fileID: 4357687305597626670, guid: d174d98ee3db2ca41bfb2e7ad1d86f61,
         type: 3}
       propertyPath: m_AnchorMin.y

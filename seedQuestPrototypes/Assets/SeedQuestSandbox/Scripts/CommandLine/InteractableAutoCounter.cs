@@ -21,46 +21,30 @@ public class InteractableAutoCounter : MonoBehaviour
     private int updateDelay;
     private int waitCheck;
 
-    public static Dictionary<int, string> sceneDict = new Dictionary<int, string>
-    {
-        {0, "Campground Iso"},
-        {1, "Cafe"},
-        {2, "CastleBeach"},
-        {3, "ArabianDay"},
-        {4, "DinoSafari"},
-        {5, "Farm"},
-        {6, "HauntedHouse"},
-        {7, "Sports"},
-        {8, "Apartment"},
-        {9, "Lab_ISO"},
-        {10, "SorcererTower"},
-        {11, "PirateShip_Wreck"},
-        {12, "NonnaBIG_ISO"},
-        {13, "SaloonBiggerISO"},
-        {14, "SnowLand"},
-        {15, "Space"}
-    };
+    public WorldSceneList worldSceneList;
 
     private List<string[]> interactableRowData = new List<string[]>();
     private bool writtenToCSV = false;
 
     void Start()
     {
-        string[] rowHeader = new string[14];
-        rowHeader[0] = "Interactable Name";
-        rowHeader[1] = "Object Name";
-        rowHeader[2] = "Scene Name";
-        rowHeader[3] = "Scene ID";
+        string[] rowHeader = new string[16];
+        rowHeader[0] = "Scene ID";
+        rowHeader[1] = "Scene Name";
+        rowHeader[2] = "Scene Label";
+        rowHeader[3] = "Scene File";
         rowHeader[4] = "Interactable ID";
-        rowHeader[5] = "Default State";
-        rowHeader[6] = "Action One";
-        rowHeader[7] = "Action One - Object Name";
-        rowHeader[8] = "Action Two";
-        rowHeader[9] = "Action Two - Object Name";
-        rowHeader[10] = "Action Three";
-        rowHeader[11] = "Action Three - Object Name";
-        rowHeader[12] = "Action Four";
-        rowHeader[13] = "Action Four - Object Name";
+        rowHeader[5] = "Interactable Name";
+        rowHeader[6] = "Object Name";
+        rowHeader[7] = "Default State";
+        rowHeader[8] = "Action One";
+        rowHeader[9] = "Action One - Object Name";
+        rowHeader[10] = "Action Two";
+        rowHeader[11] = "Action Two - Object Name";
+        rowHeader[12] = "Action Three";
+        rowHeader[13] = "Action Three - Object Name";
+        rowHeader[14] = "Action Four";
+        rowHeader[15] = "Action Four - Object Name";
         interactableRowData.Add(rowHeader);
     } 
 
@@ -84,7 +68,7 @@ public class InteractableAutoCounter : MonoBehaviour
         LevelSetManager.AddLevel(0);
         if (!GameManager.V2Menus)
             MenuScreenManager.Instance.state = MenuScreenStates.Debug;
-        SceneManager.LoadScene(sceneDict[0]);
+        SceneManager.LoadScene(worldSceneList.worldScenes[0].sceneName);
     }
 
     public void countAllInteractables()
@@ -113,8 +97,8 @@ public class InteractableAutoCounter : MonoBehaviour
         else if (sceneIndex < 16)
         {
             Debug.Log("Unfortunately, could not find 16 interactables in scene: " +
-                      sceneDict[sceneIndex] + " Interactable count: " + count);
-            problemScenes += "\n" + sceneDict[sceneIndex] + " Interactable count: " + count;
+                      worldSceneList.worldScenes[sceneIndex].sceneName + " Interactable count: " + count);
+            problemScenes += "\n" + worldSceneList.worldScenes[sceneIndex].sceneName + " Interactable count: " + count;
 
             failure++;
             waitCheck = 0;
@@ -144,7 +128,7 @@ public class InteractableAutoCounter : MonoBehaviour
         LevelSetManager.AddLevel(sceneIndex);
         if(!GameManager.V2Menus)
             MenuScreenManager.Instance.state = MenuScreenStates.Debug;
-        SceneManager.LoadScene(sceneDict[sceneIndex]);
+        SceneManager.LoadScene(worldSceneList.worldScenes[sceneIndex].sceneName);
     }
 
     public int interactableCount()
@@ -157,21 +141,23 @@ public class InteractableAutoCounter : MonoBehaviour
 
         foreach(Interactable item in items)
         {
-            string[] rowData = new string[14];
-            rowData[0] = item.Name;
-            rowData[1] = item.name;
-            rowData[2] = sceneDict[sceneIndex];
-            rowData[3] = sceneIndex.ToString();
+            string[] rowData = new string[16];
+            rowData[0] = sceneIndex.ToString();
+            rowData[1] = SeedQuest.Level.LevelManager.LevelName;
+            rowData[2] = worldSceneList.worldScenes[sceneIndex].name;
+            rowData[3] = worldSceneList.worldScenes[sceneIndex].sceneName;
             rowData[4] = item.ID.spotID.ToString();
-            rowData[5] = (item.stateData.defaultState.prefab != null) ? item.stateData.defaultState.prefab.name : "null";
-            rowData[6] = (item.stateData.states[0] != null) ? item.stateData.states[0].actionName : "null";
-            rowData[7] = (item.stateData.states[0].prefab != null) ? item.stateData.states[0].prefab.name : "null";
-            rowData[8] = (item.stateData.states[1] != null) ? item.stateData.states[1].actionName : "null";
-            rowData[9] = (item.stateData.states[1].prefab != null) ? item.stateData.states[1].prefab.name : "null";
-            rowData[10] = (item.stateData.states[2] != null) ? item.stateData.states[2].actionName : "null";
-            rowData[11] = (item.stateData.states[2].prefab != null) ? item.stateData.states[2].prefab.name : "null";
-            rowData[12] = (item.stateData.states[3] != null) ? item.stateData.states[3].actionName : "null";
-            rowData[13] = (item.stateData.states[3].prefab != null) ? item.stateData.states[3].prefab.name : "null";
+            rowData[5] = item.Name;
+            rowData[6] = item.name;
+            rowData[7] = (item.stateData.defaultState.prefab != null) ? item.stateData.defaultState.prefab.name : "null";
+            rowData[8] = (item.stateData.states[0] != null) ? item.stateData.states[0].actionName.Replace("\"", "\"\"") : "null";
+            rowData[9] = (item.stateData.states[0].prefab != null) ? item.stateData.states[0].prefab.name : "null";
+            rowData[10] = (item.stateData.states[1] != null) ? item.stateData.states[1].actionName.Replace("\"", "\"\"") : "null";
+            rowData[11] = (item.stateData.states[1].prefab != null) ? item.stateData.states[1].prefab.name : "null";
+            rowData[12] = (item.stateData.states[2] != null) ? item.stateData.states[2].actionName.Replace("\"", "\"\"") : "null";
+            rowData[13] = (item.stateData.states[2].prefab != null) ? item.stateData.states[2].prefab.name : "null";
+            rowData[14] = (item.stateData.states[3] != null) ? item.stateData.states[3].actionName.Replace("\"", "\"\"") : "null";
+            rowData[15] = (item.stateData.states[3].prefab != null) ? item.stateData.states[3].prefab.name : "null";
 
             interactableRowData.Add(rowData);
         }

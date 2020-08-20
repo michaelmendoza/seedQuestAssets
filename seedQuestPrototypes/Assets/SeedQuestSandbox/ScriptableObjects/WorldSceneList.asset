@@ -69,7 +69,7 @@ MonoBehaviour:
     sceneName: SaloonBiggerISO
     thumbnail: {fileID: 21300000, guid: e4b21cbd15efc4c119421425e0c08ad0, type: 3}
     preview: {fileID: 21300000, guid: 4cba5ff7884f741a9a07afca351b6cc7, type: 3}
-  - name: Snowlands
+  - name: Snowland
     sceneName: SnowLand
     thumbnail: {fileID: 21300000, guid: 129c4741e69a742a5949ee5ed956ab5f, type: 3}
     preview: {fileID: 21300000, guid: 7906a86e684b841839f7bc02456455bb, type: 3}
