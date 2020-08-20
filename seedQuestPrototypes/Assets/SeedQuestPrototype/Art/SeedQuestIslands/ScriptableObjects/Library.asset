@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1c21d9ece6c4e229a7c25408d3063a, type: 3}
   m_Name: Library
   m_EditorClassIdentifier: 
-  interactableName: 
-  labelPosOffset: {x: 0, y: 0, z: 0}
   interactableUI:
     name: Library
     positionOffset: {x: 0, y: 2, z: 0}
@@ -35,6 +33,24 @@ MonoBehaviour:
     siteID: 0
     spotID: 12
     actionID: 0
+  defaultState:
+    actionName: 
+    prefab: {fileID: 0}
+    positionOffset: {x: 0, y: 0, z: 0}
+    mesh: {fileID: 0}
+    material: {fileID: 0}
+    materialIndex: 0
+    uvOffset: {x: 0, y: 0}
+    animatorController: {fileID: 0}
+    soundEffectName: 
+    soundEffect:
+      name: 
+      clip: {fileID: 0}
+      volume: 1
+      loop: 0
+      source: {fileID: 0}
+    particleEffectName: 
+    particleEffect: {fileID: 0}
   states:
   - actionName: Read a Red Book
     prefab: {fileID: 6749999933707213969, guid: dc140b50d225d9f4285e4b39204def08,
