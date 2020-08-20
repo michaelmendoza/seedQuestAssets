@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1c21d9ece6c4e229a7c25408d3063a, type: 3}
   m_Name: Farm_Sheep
   m_EditorClassIdentifier: 
-  interactableName: 
-  labelPosOffset: {x: 0, y: 0, z: 0}
   interactableUI:
     name: Sheep
     positionOffset: {x: 0, y: 3, z: 0}
@@ -35,6 +33,25 @@ MonoBehaviour:
     siteID: 11
     spotID: 12
     actionID: 0
+  defaultState:
+    actionName: Sheep
+    prefab: {fileID: 4293986484634032470, guid: e56df53db0cba475bae847dff4ae9c17,
+      type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    mesh: {fileID: 0}
+    material: {fileID: 0}
+    materialIndex: 0
+    uvOffset: {x: 0, y: 0}
+    animatorController: {fileID: 0}
+    soundEffectName: 
+    soundEffect:
+      name: 
+      clip: {fileID: 0}
+      volume: 1
+      loop: 0
+      source: {fileID: 0}
+    particleEffectName: 
+    particleEffect: {fileID: 0}
   states:
   - actionName: Herd the Sheep
     prefab: {fileID: 5210595755547954187, guid: 941099cf4d3b24211a81274a73ff9045,
