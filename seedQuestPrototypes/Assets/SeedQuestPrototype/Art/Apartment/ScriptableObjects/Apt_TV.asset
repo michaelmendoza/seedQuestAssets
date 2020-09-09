@@ -54,7 +54,7 @@ MonoBehaviour:
     particleEffect: {fileID: 0}
   states:
   - actionName: Commercial
-    prefab: {fileID: 2707575246848612739, guid: 8ed9cffa65beb6f49a9849158ae18984,
+    prefab: {fileID: 2707575246848612739, guid: 5d340d4182e7a4d46abb68c3b3151d05,
       type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     mesh: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
     particleEffectName: 
     particleEffect: {fileID: 0}
   - actionName: Video Game
-    prefab: {fileID: 5188961786789519244, guid: e708ba1c5e305664eb7afe93e04e939d,
+    prefab: {fileID: 5188961786789519244, guid: 2d59b81f050a44f5b9e97128aefd35e3,
       type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     mesh: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
     particleEffectName: 
     particleEffect: {fileID: 0}
   - actionName: Soccer
-    prefab: {fileID: 7322730895967078213, guid: 9b22620b07a6c5242982e463328bb146,
+    prefab: {fileID: 7322730895967078213, guid: 3243ed303c9114c20b3d9570e93eee4f,
       type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     mesh: {fileID: 0}
