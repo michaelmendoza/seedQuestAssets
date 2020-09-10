@@ -1809,6 +1809,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8da9d4022e42647b586db427055f4577,
         type: 2}
+    - target: {fileID: 5105786211925052156, guid: 60efb4839362f4a89a682dcacc4ed593,
+        type: 3}
+      propertyPath: UseReviewMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5373112276980864987, guid: 60efb4839362f4a89a682dcacc4ed593,
         type: 3}
       propertyPath: worldSceneList
@@ -7637,6 +7642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846289205205190350, guid: d174d98ee3db2ca41bfb2e7ad1d86f61,
+        type: 3}
+      propertyPath: m_text
+      value: Enter your seed below. It should be 14 hex characters long.
       objectReference: {fileID: 0}
     - target: {fileID: 3849238802379337952, guid: d174d98ee3db2ca41bfb2e7ad1d86f61,
         type: 3}

@@ -25,43 +25,19 @@ public class GameManager : MonoBehaviour {
         instance = null;
     }
 
+    public static bool[] GraduatedFlags { get; set; } = new bool[6];
+    public static void ResetGraduatedRehearsal()  {
+        GraduatedFlags = new bool[6];
+    }
+    public static bool ReviewMode { get; set; } = false;
+    public static bool TutorialMode { get; set; } = false;
+    public static bool MobileMode { get; set; } = false;
+    public static bool V2Menus { get; set; } = true;
+
     public GameMode mode = GameMode.Sandbox;
     public static GameMode Mode { 
         get { return Instance.mode; }
         set { Instance.mode = value; }
-    }
-
-    private static bool[] graduatedFlags = new bool[6];
-    public static bool[] GraduatedFlags
-    {
-        get { return graduatedFlags; }
-        set { graduatedFlags = value; }
-    }
-
-    public static void ResetGraduatedRehearsal()
-    {
-        GraduatedFlags = new bool[6];
-    }
-
-    private static bool reviewMode = false;
-    public static bool ReviewMode
-    {
-        get { return reviewMode; }
-        set { reviewMode = value; }
-    }
-
-    private static bool tutorialMode = false;
-    public static bool TutorialMode
-    {
-        get { return tutorialMode; }
-        set { tutorialMode = value; }
-    }
-
-    private static bool mobilelMode = false;
-    public static bool MobileMode
-    {
-        get { return mobilelMode; }
-        set { mobilelMode = value; }
     }
 
     public GameState state = GameState.Play;
@@ -75,6 +51,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public InteractableConfigData interactableConfig = null;
+    public bool UseReviewMode = true;
 
     private void Start()
     {
@@ -107,10 +84,4 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private static bool v2Menus = true;
-    public static bool V2Menus
-    {
-        get { return v2Menus; }
-        set { v2Menus = value; }
-    }
 } 
