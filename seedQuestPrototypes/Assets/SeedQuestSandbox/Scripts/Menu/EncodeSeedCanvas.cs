@@ -16,6 +16,8 @@ public class EncodeSeedCanvas : MonoBehaviour {
     private Button continueButton;
     private bool initialized = false;
 
+    public bool UseSeedStrengthButtons = true;
+
     private void Start() {
         sceneCount = 0;
         Initialize();
@@ -39,10 +41,18 @@ public class EncodeSeedCanvas : MonoBehaviour {
     public void Initialize() {
         InitalizeWorldPreviews();
 
-        if (GameManager.Mode == GameMode.Rehearsal)
+        if(UseSeedStrengthButtons)
+        {
+            if (GameManager.Mode == GameMode.Rehearsal)
+                GetComponentInChildren<SeedStrSelection>(true).gameObject.SetActive(false);
+            else if (GameManager.Mode == GameMode.Recall)
+                GetComponentInChildren<SeedStrSelection>(true).gameObject.SetActive(true);
+        }
+        else
+        {
             GetComponentInChildren<SeedStrSelection>(true).gameObject.SetActive(false);
-        else if (GameManager.Mode == GameMode.Recall)
-            GetComponentInChildren<SeedStrSelection>(true).gameObject.SetActive(true);
+        }
+
         indicators = GetComponentsInChildren<SceneSelectedIndicator>(true);
         Button[] _buttons = GetComponentsInChildren<Button>(true);
         buttons = new Button[16];
@@ -226,8 +236,7 @@ public class EncodeSeedCanvas : MonoBehaviour {
 
     public void resetSeedStr()
     {
-        if (GameManager.Mode == GameMode.Recall)
-        {
+        if (UseSeedStrengthButtons && GameManager.Mode == GameMode.Recall) {
             GetComponentInChildren<SeedStrSelection>().reset();
         }
     }
