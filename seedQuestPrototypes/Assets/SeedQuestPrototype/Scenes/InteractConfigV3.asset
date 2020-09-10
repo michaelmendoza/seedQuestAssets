@@ -15,5 +15,5 @@ MonoBehaviour:
   SiteBits: 4
   InteractableBits: 4
   ActionBits: 2
-  ActionsPerSite: 4
-  SitesPerGame: 2
+  ActionsPerSite: 3
+  SitesPerGame: 6
