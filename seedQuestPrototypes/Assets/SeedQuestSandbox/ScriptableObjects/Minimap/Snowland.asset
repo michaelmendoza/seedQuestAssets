@@ -19,5 +19,5 @@ MonoBehaviour:
   mapZoom: 150
   xScale: 9
   yScale: 9
-  playerXOffset: -60
-  playerYOffset: -320
+  playerXOffset: 0
+  playerYOffset: 0
