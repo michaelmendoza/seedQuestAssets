@@ -2954,21 +2954,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 216862864}
     m_Modifications:
-    - target: {fileID: 2546935889622162326, guid: 088ae45017df7394894dea9d20f1595e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765652219945163785, guid: 088ae45017df7394894dea9d20f1595e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 7280986005266989113, guid: 088ae45017df7394894dea9d20f1595e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 7530584008426828341, guid: cfe79d731ed3a6c4cbaa290c47486b47,
         type: 3}
       propertyPath: m_Name
@@ -3078,6 +3063,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546935889622162326, guid: 088ae45017df7394894dea9d20f1595e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765652219945163785, guid: 088ae45017df7394894dea9d20f1595e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280986005266989113, guid: 088ae45017df7394894dea9d20f1595e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfe79d731ed3a6c4cbaa290c47486b47, type: 3}
@@ -22693,7 +22693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1542919509}
   smoothSpeed: 2
-  lookAtSpeed: 1
+  lookAtSpeed: 2
   cameraDirection: {x: 1, y: 1, z: -1}
   distance: 15
   startingDistance: 30

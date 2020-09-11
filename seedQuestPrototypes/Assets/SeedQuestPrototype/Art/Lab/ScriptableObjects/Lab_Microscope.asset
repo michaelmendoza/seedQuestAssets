@@ -16,9 +16,9 @@ MonoBehaviour:
     name: Look At Microscope
     positionOffset: {x: -0.23, y: 0, z: -0.61}
   interactableCamera:
-    lookAtOffset: {x: 0.38, y: 0.62, z: -0.72}
-    positionOffset: {x: -18.75, y: -10.63, z: -0.44}
-    zoomDistance: 21.81
+    lookAtOffset: {x: -10.3, y: -5.86, z: -0.36}
+    positionOffset: {x: 4.21, y: 3.59, z: -2.11}
+    zoomDistance: 0
   interactablePreview:
     scale: {x: 1, y: 1, z: 1}
     position: {x: -0.11, y: -0.31, z: -2.71}
