@@ -11,7 +11,7 @@ public class SettingsManager : MonoBehaviour {
     public float soundEffectVolume = 1.0f;
     public float cameraSensitivity = 1.0f;
     public bool muteVolume = false;
-    public ConfigData config;
+    public InteractableConfigData interactableDefaultConfig;
 
     static private SettingsManager __instance = null;
     static public SettingsManager Instance
@@ -25,13 +25,13 @@ public class SettingsManager : MonoBehaviour {
     }
 
     public void Start() {
-        SettingsManager.ApplyConfiguration();
+        ApplyDefaultInteractableSettings();
     }
 
-    static public bool ApplyConfiguration(){
-        if (Instance.config != null) {
-            Instance.config.ApplyConfiguration();
-            Debug.Log("ApplyConfig:" + InteractableConfig.SeedHexSize);
+    static public bool ApplyDefaultInteractableSettings(){
+        if (Instance.interactableDefaultConfig != null) {
+            Instance.interactableDefaultConfig.ApplyConfiguration();
+            Debug.Log("Apply Interactable Default Settings --- Seed Hex Size:" + InteractableConfig.SeedHexSize);
             return true;
         }
         else {

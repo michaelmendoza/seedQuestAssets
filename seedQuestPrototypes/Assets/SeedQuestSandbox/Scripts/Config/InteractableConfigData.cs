@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using SeedQuest.Interactables;
 
-[CreateAssetMenu(menuName = "Config/ConfigData")]
-public class ConfigData : ScriptableObject {
+[CreateAssetMenu(menuName = "Config/InteractableConfigData")]
+public class InteractableConfigData : ScriptableObject {
     public int SiteBits = 4;
     public int InteractableBits = 4;
     public int ActionBits = 2;

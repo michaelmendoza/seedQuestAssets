@@ -46,7 +46,7 @@ public class SeedStrSelection : MonoBehaviour
 
     public void reset()
     {
-        bool applied = SettingsManager.ApplyConfiguration();
+        bool applied = SettingsManager.ApplyDefaultInteractableSettings();
         if(!applied)
             InteractableConfig.SitesPerGame = 6;
 
