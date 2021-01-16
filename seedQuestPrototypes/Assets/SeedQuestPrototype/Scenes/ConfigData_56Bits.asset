@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: InteractConfig56Bit
-  m_EditorClassIdentifier: Assembly-CSharp:SeedQuest.Interactables:InteractableConfigData
+  m_Script: {fileID: 11500000, guid: aa744c04759184860801151ac2da649c, type: 3}
+  m_Name: ConfigData_56Bits
+  m_EditorClassIdentifier: 
   SiteBits: 4
   InteractableBits: 4
   ActionBits: 2

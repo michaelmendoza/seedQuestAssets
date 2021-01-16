@@ -46,9 +46,8 @@ public class SeedStrSelection : MonoBehaviour
 
     public void reset()
     {
-        if (GameManager.Instance.interactableConfig != null)
-            GameManager.SetInteractableConfiguration();
-        else
+        bool applied = SettingsManager.ApplyConfiguration();
+        if(!applied)
             InteractableConfig.SitesPerGame = 6;
 
         Color[] colors = new Color[3];

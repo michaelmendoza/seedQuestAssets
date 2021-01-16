@@ -7,7 +7,7 @@ namespace SeedQuest.Interactables
     /// <summary>
     /// Interactable Configurations for SeedQuest
     /// </summary>
-    [System.Serializable]
+    [System.Serializable] 
     public class InteractableConfig
     {
         /// <summary> Numer of Bits for Levels/Sites in Game  </summary>
@@ -48,35 +48,5 @@ namespace SeedQuest.Interactables
 
         /// <summary> Hex string length for a Seed  </summary>
         static public int SeedHexLength { get => Mathf.CeilToInt(BitEncodingCount / 4.0f); }
-
-        /// <summary>
-        /// Sets the interactable configuration from a scriptable object 
-        /// </summary>
-        /// <param name="config"> Scriptable object configuration </param>
-        static public void SetConfiguration(InteractableConfigData config) {
-            SiteBits = config.SiteBits;
-            InteractableBits = config.InteractableBits;
-            ActionBits = config.ActionBits;
-            ActionsPerSite = config.ActionsPerSite;
-            SitesPerGame = config.SitesPerGame;
-        }
-    }
-
-    [CreateAssetMenu(menuName = "Interactables/InteractableConfigData")]
-    public class InteractableConfigData : ScriptableObject {
-        /// <summary> Numer of Bits for Levels/Sites in Game  </summary>
-        public int SiteBits = 4;
-
-        /// <summary> Number of Bits for Interactables per Level  </summary>
-        public int InteractableBits = 4;
-
-        /// <summary> Number of Bits for Actions per Interactable </summary>
-        public int ActionBits = 2;
-
-        /// <summary> Number of Actions to do per Level </summary>
-        public int ActionsPerSite = 3; 
-
-        /// <summary> Number of Levels to do per Game </summary>
-        public int SitesPerGame = 6; 
     }
 }

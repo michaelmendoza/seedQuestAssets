@@ -50,21 +50,10 @@ public class GameManager : MonoBehaviour {
         get { return Instance.prevState; }
     }
 
-    public InteractableConfigData interactableConfig = null;
-
     public bool UseReviewMode = true;
-
-    private void Start() {
-        SetInteractableConfiguration();
-    }
 
     public void Update() {
         ListenForKeyDown();
-    }
-
-    static public void SetInteractableConfiguration() {
-        if (Instance.interactableConfig != null)
-            InteractableConfig.SetConfiguration(Instance.interactableConfig);
     }
 
     static public void ResetCursor() {

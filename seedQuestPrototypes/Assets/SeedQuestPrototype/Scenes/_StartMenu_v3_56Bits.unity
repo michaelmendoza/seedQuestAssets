@@ -1348,6 +1348,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSystems
       objectReference: {fileID: 0}
+    - target: {fileID: 8702242336597828250, guid: 60efb4839362f4a89a682dcacc4ed593,
+        type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 11400000, guid: 9bb0dac0f020749d7a2bb5fadce7e57e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60efb4839362f4a89a682dcacc4ed593, type: 3}
 --- !u!4 &3159523895410514859 stripped
@@ -10006,7 +10012,7 @@ PrefabInstance:
     - target: {fileID: 8057820384746312340, guid: d174d98ee3db2ca41bfb2e7ad1d86f61,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 18.99997
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8070823865397660330, guid: d174d98ee3db2ca41bfb2e7ad1d86f61,
         type: 3}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SeedQuest.Interactables;
 
 public class SettingsManager : MonoBehaviour {
     
@@ -10,6 +11,7 @@ public class SettingsManager : MonoBehaviour {
     public float soundEffectVolume = 1.0f;
     public float cameraSensitivity = 1.0f;
     public bool muteVolume = false;
+    public ConfigData config;
 
     static private SettingsManager __instance = null;
     static public SettingsManager Instance
@@ -19,6 +21,21 @@ public class SettingsManager : MonoBehaviour {
             if (__instance == null)
                 __instance = GameObject.FindObjectOfType<SettingsManager>();
             return __instance;
+        }
+    }
+
+    public void Start() {
+        SettingsManager.ApplyConfiguration();
+    }
+
+    static public bool ApplyConfiguration(){
+        if (Instance.config != null) {
+            Instance.config.ApplyConfiguration();
+            Debug.Log("ApplyConfig:" + InteractableConfig.SeedHexSize);
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
