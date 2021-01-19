@@ -28,17 +28,6 @@ public class SettingsManager : MonoBehaviour {
         ApplyDefaultInteractableSettings();
     }
 
-    static public bool ApplyDefaultInteractableSettings(){
-        if (Instance.interactableDefaultConfig != null) {
-            Instance.interactableDefaultConfig.ApplyConfiguration();
-            Debug.Log("Apply Interactable Default Settings --- Seed Hex Size:" + InteractableConfig.SeedHexSize);
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
     static public float MasterVolume {
         get { return Instance.masterVolume; }
         set { Instance.masterVolume = value; AudioManager.UpdateAudioSettings(); }
@@ -63,5 +52,16 @@ public class SettingsManager : MonoBehaviour {
     {
         get { return Instance.cameraSensitivity; }
         set { Instance.cameraSensitivity = value; }
+    }
+
+    static public bool ApplyDefaultInteractableSettings() {
+        if (Instance.interactableDefaultConfig != null) {
+            Instance.interactableDefaultConfig.ApplyConfiguration();
+            Debug.Log("Apply Interactable Default Settings --- Seed Hex Size:" + InteractableConfig.SeedHexSize);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
