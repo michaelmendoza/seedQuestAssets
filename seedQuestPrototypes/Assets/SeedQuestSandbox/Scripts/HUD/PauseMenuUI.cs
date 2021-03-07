@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using SeedQuest.Interactables;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenuUI : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class PauseMenuUI : MonoBehaviour
 
     public void Awake() {
         animator = GetComponent<Animator>();
+
+        // Hide Exit Button for WebGL Platform 
+        #if UNITY_WEBGL
+            GameObject exitButton = GameObject.Find("Button_Exit");
+            exitButton.SetActive(false);
+        #endif
     }
     public void Toggle() {
         bool active = Instance.gameObject.activeSelf;

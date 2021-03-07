@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/SeedQuestPrototype/Scenes/_StartMenu_v3_56Bits.unity
     guid: 82c47fc3d55b343c686c2f87c306afaa
   - enabled: 0
+    path: Assets/SeedQuestPrototype/Scenes/_StartMenu_v3_128Bits.unity
+    guid: f5bb7527c7348432eabc31095a2cceb1
+  - enabled: 0
     path: Assets/SeedQuestPrototype/Scenes/Mobile/MobileStartLoading.unity
     guid: 3bf30b5aa3dd547ea92e5af5792595b1
   - enabled: 0
